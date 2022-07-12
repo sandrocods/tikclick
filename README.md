@@ -1,12 +1,32 @@
 <p align="center">
   <img width="500" height="500" src="https://i.ibb.co/3SC8cNd/Blue-and-Gold-Icon-Cryptocurrency-Instagram-Cover-Highlight-3.png">
-  <h1 align="center" >TikClick</h1>
+
 </p>
+
+<p align="center">
+  <img align="center" width="100" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+  <img align="center" width="100" src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
+  <img align="center" width=100" src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white">
+ </p>
 
 
 #### Simple Python3 Project to Download video TikTok Without Watermark only click copy link in browser
 
-![app](https://i.ibb.co/5TMPnnC/image.png)
+<details> 
+<summary>📌 How to find Copy link in tiktok</summary>
+<hr>
+
+> <strong>Open tiktok link example : </strong> `https://www.tiktok.com/@awokwokwokwkokwow/video/6865609642974743810?is_from_webapp=1&sender_device=pc&web_id=7054835408228959746` click copy link
+                                                                                                                                   
+![sc](https://i.ibb.co/Ksb1ZQ3/image.png) 
+
+#### or
+                                                                                                                                   
+> <strong>Open tiktok homepage click copy link                                                                                                                                  
+![app](https://i.ibb.co/5TMPnnC/image.png)                                                                                                                                                                                                                                                                                                                                                                                
+</details>
+                                                                                                                                   
+
 
 
 ## 📚 Build With
