@@ -52,7 +52,7 @@ Install requirments.txt
 
 #### Result :
 
-![appwin](https://im4.ezgif.com/tmp/ezgif-4-dc61f774cc.gif)
+![appwin](https://s8.gifyu.com/images/ezgif-1-cbeed8e92f.gif)
 
 
 
@@ -70,7 +70,7 @@ Run program
 
 #### Result :
 
-![appwin](https://im4.ezgif.com/tmp/ezgif-4-092b0ff2e5.gif)
+![appwin](https://s8.gifyu.com/images/ezgif-1-e13d1df694.gif)
 
 ### 🔗 All video saved in ./download/username_tiktok/video_id.mp4
 ## Authors
