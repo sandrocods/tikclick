@@ -5,8 +5,9 @@
 
 <p align="center">
   <img align="center" width="100" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
-  <img align="center" width="100" src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
-  <img align="center" width=100" src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white">
+  <img align="center" width=115" src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white">
+  <img align="center" width="101" src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
+  <img align="center" width=129" src="https://img.shields.io/badge/Linux Mint-0078D6?style=for-the-badge&logo=linux-mint&logoColor=white">
  </p>
 
 
@@ -78,19 +79,28 @@ Install requirments.txt
 
 #### For Linux
 
-Install package xclip first
+Install package xclip dan notify-osd first
 ```bash
-  sudo apt-get install xclip
+  sudo apt-get install notify-osd -y && sudo apt-get install xclip -y
 ```
 
 Run program
 ```bash
-  python3 main.py
+  python3 main.py --auto_show=True
 ```
 
-#### Result :
+| Parameter   | Type      | Description                                          |
+|:------------|:----------|:-----------------------------------------------------|
+| `auto_show` | `boolean` | **Required**. To automatic show video after download |
 
+
+### Result :
+
+#### Ubuntu
 ![appwin](https://s8.gifyu.com/images/ezgif-1-e13d1df694.gif)
+
+#### Linux Mint
+![appwin](https://s8.gifyu.com/images/ezgif-3-80136b321d.gif)
 
 ### 🔗 All video saved in ./download/username_tiktok/video_id.mp4
 ## Authors
