@@ -79,7 +79,7 @@ Install requirments.txt
 
 #### For Linux
 
-Install package xclip and notify-osd first
+Install package xclip danf notify-osd first
 ```bash
   sudo apt-get install notify-osd -y && sudo apt-get install xclip -y
 ```
