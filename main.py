@@ -3,11 +3,11 @@ from src.tikdown import *
 
 list_downloaded = []
 
-
 def run_process_windows():
     from win10toast_click import ToastNotifier
     import pyperclip
     import time
+
 
     toaster = ToastNotifier()
 
@@ -48,7 +48,7 @@ def run_process_windows():
             pass
 
 
-def run_process_linux(argv):
+def run_process_linux():
     # !/usr/bin/env python3
     import subprocess
     import pyperclip
@@ -67,45 +67,20 @@ def run_process_linux(argv):
                     print("Downloaded: " + tikdownload.nick_name + " - " + tikdownload.vid_id)
                     subprocess.call(
                         ["notify-send", "TikClick", "Downloaded " + tikdownload.nick_name + "'s video"])
-
-                    if argv.upper() == "TRUE":
-                        subprocess.call(["xdg-open",
-                                         os.getcwd() + "/downloads/" + tikdownload.nick_name + "/" + tikdownload.vid_id + ".mp4"])
-                    else:
-                        pass
+                    subprocess.call(["xdg-open",
+                                     os.getcwd() + "/downloads/" + tikdownload.nick_name + "/" + tikdownload.vid_id + ".mp4"])
                 else:
                     pass
             else:
                 pass
+
         else:
             pass
 
 
 if __name__ == '__main__':
-    try:
-        import argparse
-
-        parser = argparse.ArgumentParser()
-        parser.add_argument("--auto_show", help="Auto open video after download (True/False)", required=True)
-        args = parser.parse_args()
-
-        if args.auto_show.upper() == "TRUE":
-            pass
-        elif args.auto_show.upper() == "FALSE":
-            pass
-        else:
-            print("Error: --auto_show must be True or False")
-            sys.exit()
-
-        while True:
-            if sys.platform == "win32":
-                run_process_windows()
-            elif sys.platform == "linux":
-                run_process_linux(argv=args.auto_show)
-
-    except KeyboardInterrupt:
-        print("\nExiting...")
-        sys.exit()
-    except Exception as e:
-        print(e)
-        sys.exit()
+    while True:
+        if sys.platform == "win32":
+            run_process_windows()
+        elif sys.platform == "linux":
+            run_process_linux()
