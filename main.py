@@ -86,13 +86,13 @@ if __name__ == '__main__':
         try:
             import pyperclip
         except ImportError:
-            subprocess.call(["pip", "install", "pyperclip"])
+            subprocess.call(["pip3", "install", "pyperclip"])
             print("[!] pyperclip installed")
 
         try:
             import requests
         except ImportError:
-            subprocess.call(["pip", "install", "requests"])
+            subprocess.call(["pip3", "install", "requests"])
             print("[!] requests installed")
 
         if sys.platform == "win32":
@@ -100,7 +100,7 @@ if __name__ == '__main__':
             try:
                 import win10toast_click
             except ImportError:
-                subprocess.call(["pip", "install", "win10toast_click"])
+                subprocess.call(["pip3", "install", "win10toast_click"])
                 print("[!] win10toast_click installed")
 
             from win10toast_click import ToastNotifier
