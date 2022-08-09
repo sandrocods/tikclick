@@ -2,7 +2,7 @@ import os
 import requests
 from urllib.parse import urlparse
 
-import random
+
 API_URL1 = 'https://api2-16-h2.musical.ly/aweme/v1/play/'
 API_URL2 = 'https://api2.musical.ly'
 

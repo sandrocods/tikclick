@@ -1,6 +1,7 @@
+import subprocess
 import sys
 from src.tikdown import *
-import pyperclip
+
 list_downloaded = []
 
 
@@ -81,6 +82,57 @@ def run_process_linux(argv):
 
 if __name__ == '__main__':
     try:
+        # check installed module and install if not installed
+        try:
+            import pyperclip
+        except ImportError:
+            subprocess.call(["pip", "install", "pyperclip"])
+            print("[!] pyperclip installed")
+
+        try:
+            import requests
+        except ImportError:
+            subprocess.call(["pip", "install", "requests"])
+            print("[!] requests installed")
+
+        if sys.platform == "win32":
+
+            try:
+                import win10toast_click
+            except ImportError:
+                subprocess.call(["pip", "install", "win10toast_click"])
+                print("[!] win10toast_click installed")
+
+            from win10toast_click import ToastNotifier
+            toaster = ToastNotifier()
+            toaster.show_toast(
+                title="Tiktok Downloader",
+                msg="Welcome to TikClick, You can download TikTok videos without watermark",
+                duration=5,
+                icon_path=os.getcwd() + "/src/icon.ico"
+            )
+
+
+        elif sys.platform == "linux":
+
+            if subprocess.call(["which", "notify-osd"]) == 1:
+                pass
+            else:
+                subprocess.call(["sudo", "apt-get", "install", "notify-osd"], shell=False, stdout=subprocess.DEVNULL,
+                                stderr=subprocess.DEVNULL)
+                print("[!] notify-send installed")
+
+            if subprocess.call(["which", "xclip"]) == 1:
+                pass
+
+            else:
+                subprocess.call(["sudo", "apt-get", "install", "xclip"], shell=False, stdout=subprocess.DEVNULL,
+                                stderr=subprocess.DEVNULL)
+                print("[!] xclip installed")
+
+            subprocess.call(
+                ["notify-send", "TikClick", "Welcome to TikClick, You can download TikTok videos without watermark"])
+
         import argparse
 
         parser = argparse.ArgumentParser()
@@ -103,7 +155,4 @@ if __name__ == '__main__':
 
     except KeyboardInterrupt:
         print("\nExiting...")
-        sys.exit()
-    except Exception as e:
-        print(e)
         sys.exit()
