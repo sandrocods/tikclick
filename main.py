@@ -1,12 +1,11 @@
 import sys
 from src.tikdown import *
-
+import pyperclip
 list_downloaded = []
 
 
 def run_process_windows():
     from win10toast_click import ToastNotifier
-    import pyperclip
     import time
 
     toaster = ToastNotifier()
@@ -51,7 +50,6 @@ def run_process_windows():
 def run_process_linux(argv):
     # !/usr/bin/env python3
     import subprocess
-    import pyperclip
 
     if pyperclip.paste() in list_downloaded:
         pass
